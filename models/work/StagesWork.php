@@ -2,9 +2,9 @@
 
 namespace app\models\work;
 
-use app\models\Journals;
+use app\models\Stages;
 
-class JournalsWork extends Journals
+class StagesWork extends Stages
 {
 
 }

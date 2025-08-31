@@ -2,7 +2,9 @@
 
 namespace app\models\work;
 
-class ProjectsWork
+use app\models\Projects;
+
+class ProjectsWork extends Projects
 {
 
 }

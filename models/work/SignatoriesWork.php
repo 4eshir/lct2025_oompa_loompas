@@ -2,9 +2,9 @@
 
 namespace app\models\work;
 
-use app\models\Projects;
+use app\models\Signatories;
 
-class ProjectsWork extends Projects
+class SignatoriesWork extends Signatories
 {
 
 }

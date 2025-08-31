@@ -2,9 +2,9 @@
 
 namespace app\models\work;
 
-use app\models\Journals;
+use app\models\Notes;
 
-class JournalsWork extends Journals
+class NotesWork extends Notes
 {
 
 }
