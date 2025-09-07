@@ -45,6 +45,7 @@ class m250830_103155_journal_tables extends Migration
             'id' => $this->primaryKey(),
             'note_id' => $this->integer()->notNull(),
             'signatory_type' => $this->string(64)->notNull(),
+            'user_id' => $this->integer()->notNull(),
             'status' => $this->string(64)->notNull()
         ]);
 

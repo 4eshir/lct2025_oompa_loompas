@@ -10,6 +10,7 @@ use Yii;
  * @property int $id
  * @property int $note_id
  * @property string $signatory_type
+ * @property int $user_id
  * @property string $status
  *
  * @property Notes $note
@@ -32,8 +33,8 @@ class Signatories extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['note_id', 'signatory_type', 'status'], 'required'],
-            [['note_id'], 'integer'],
+            [['note_id', 'signatory_type', 'user_id', 'status'], 'required'],
+            [['note_id', 'user_id'], 'integer'],
             [['signatory_type', 'status'], 'string', 'max' => 64],
             [['note_id'], 'exist', 'skipOnError' => true, 'targetClass' => Notes::class, 'targetAttribute' => ['note_id' => 'id']],
         ];
@@ -48,6 +49,7 @@ class Signatories extends \yii\db\ActiveRecord
             'id' => 'ID',
             'note_id' => 'Note ID',
             'signatory_type' => 'Signatory Type',
+            'user_id' => 'User ID',
             'status' => 'Status',
         ];
     }
