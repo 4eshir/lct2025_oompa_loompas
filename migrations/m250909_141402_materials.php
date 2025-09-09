@@ -35,6 +35,7 @@ class m250909_141402_materials extends Migration
             'id' => $this->primaryKey(),
             'material_id' => $this->integer(),
             'datetime' => $this->dateTime(),
+            'count' => $this->integer(),
             'signatory_id' => $this->integer(),
         ]);
 
