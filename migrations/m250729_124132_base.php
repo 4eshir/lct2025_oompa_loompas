@@ -12,14 +12,6 @@ class m250729_124132_base extends Migration
      */
     public function safeUp()
     {
-        $this->createTable('journal_notes', [
-            'id' => $this->primaryKey(),
-            'journal_name' => $this->string(32),
-            'note' => $this->json(),
-            'created_at' => $this->dateTime(),
-            'updated_at' => $this->dateTime(),
-        ]);
-
         $this->createTable('geo_positions', [
             'id' => $this->primaryKey(),
             'latitude' => $this->double(),
@@ -36,11 +28,6 @@ class m250729_124132_base extends Migration
             'telegram_id' => $this->integer(),
             'role' => $this->string(32)
         ]);
-
-        $this->createTable('objects', [
-            'id' => $this->primaryKey(),
-            'title' => $this->string(),
-        ]);
     }
 
     /**
@@ -49,9 +36,7 @@ class m250729_124132_base extends Migration
     public function safeDown()
     {
         $this->dropTable('geo_positions');
-        $this->dropTable('journal_notes');
         $this->dropTable('users');
-        $this->dropTable('objects');
 
         return true;
     }
