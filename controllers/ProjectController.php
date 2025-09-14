@@ -19,6 +19,11 @@ class ProjectController extends Controller
 {
     public $enableCsrfValidation = false;
 
+    /**
+     * Базовый экшн создания проекта
+     *
+     * Ожидаемый формат body {@see ProjectCreateRequest}
+     */
     public function actionCreate()
     {
         Yii::$app->response->format = Response::FORMAT_JSON;
@@ -37,6 +42,11 @@ class ProjectController extends Controller
         }
     }
 
+    /**
+     * Добавляет стейджи в проект
+     *
+     * Ожидаемый формат body {@see StagesCreateRequest}
+     */
     public function actionAddStages()
     {
         Yii::$app->response->format = Response::FORMAT_JSON;

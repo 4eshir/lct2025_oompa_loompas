@@ -10,6 +10,14 @@ class JournalCreateRequest extends Model
     public string $name = '';
     public int $stageId = 0;
 
+    /**
+     * @example
+     * {
+     *    "name": "TestJournal",
+     *    "stageId": 1
+     * }
+     */
+
     public function rules(): array
     {
         return [
